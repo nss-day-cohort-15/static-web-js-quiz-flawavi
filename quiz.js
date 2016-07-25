@@ -5,6 +5,13 @@ var button = document.querySelector('#form input[type=submit]');
 var lines;
 var spaces;
 var spaceCount = 0;
+var enterKey = document.querySelector('#button');
+enterKey.addEventListener('keypress', function (evt) {
+    var key = e.keyCode;
+    if (key === 13) {
+    }
+    evt.preventDefault();
+});
 
 
 button.addEventListener('click', function (evt) {
