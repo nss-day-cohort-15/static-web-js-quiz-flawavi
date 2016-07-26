@@ -1,6 +1,4 @@
 
-///////////////////////////// SCRATCH 3 /////////////////////////////
-
 var button = document.querySelector('#form input[type=submit]');
 var lines;
 var spaces;
@@ -15,20 +13,21 @@ enterKey.addEventListener('keypress', function (evt) {
 
 
 button.addEventListener('click', function (evt) {
-  var height = document.querySelector('#height').value;
-  var character = document.querySelector('#character').value;
-  if ((height && character) && (height > 0)) {
-    buildTree(height, character);
+  var userInput = {}
+  userInput.height = document.querySelector('#height').value;
+  userInput.character = document.querySelector('#character').value;
+  if ((userInput.height && userInput.character) && (userInput.height > 0)) {
+    buildTree(userInput);
   } else {
     alert("Please enter a height of 1 or more, and a character of your choosing. :)");
   }
   evt.preventDefault();
 });
 
-function buildTree(height, character) {
-  for (var i = 1; i <= height;) {
-    spaceCount = height - i;
-    line = Array(i*2).join(character);
+function buildTree(treeObj) {
+  for (var i = 1; i <= treeObj.height;) {
+    spaceCount = treeObj.height - i;
+    line = Array(i*2).join(treeObj.character);
     if (spaceCount > 0) {
       spaces = Array(spaceCount+1).join(' ');
       console.log(spaces+''+line);
