@@ -1,9 +1,9 @@
 
-var button = document.querySelector('#form input[type=submit]');
+// var button = document.querySelector('#form input[type=submit]');
 var lines;
 var spaces;
 var spaceCount = 0;
-var enterKey = document.querySelector('#button');
+var enterKey = document.getElementById('button');
 enterKey.addEventListener('keypress', function (evt) {
     var key = e.keyCode;
     if (key === 13) {
@@ -12,7 +12,7 @@ enterKey.addEventListener('keypress', function (evt) {
 });
 
 
-button.addEventListener('click', function (evt) {
+document.getElementById('button').addEventListener('click', function (evt) {
   var userInput = {}
   userInput.height = document.querySelector('#height').value;
   userInput.character = document.querySelector('#character').value;
