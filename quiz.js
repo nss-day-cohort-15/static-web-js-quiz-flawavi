@@ -10,6 +10,20 @@ enterKey.addEventListener('keypress', function (evt) {
     }
     evt.preventDefault();
 });
+var heightInput = document.getElementById("height").value;
+var charInput = document.getElementById("character").value;
+heightInput.addEventListener("keypress", function (evt){
+  var key = e.keyCode;
+  if (key === 13) {
+  }
+  evt.preventDefault();
+})
+charInput.addEventListener("keypress", function (evt) {
+  var key = e.keyCode;
+  if (key === 13) {
+  }
+  evt.preventDefault();
+})
 
 
 document.getElementById('button').addEventListener('click', function (evt) {
