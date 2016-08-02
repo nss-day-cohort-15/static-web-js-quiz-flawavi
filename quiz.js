@@ -10,8 +10,8 @@ enterKey.addEventListener('keypress', function (evt) {
     }
     evt.preventDefault();
 });
-var heightInput = document.getElementById("height").value;
-var charInput = document.getElementById("character").value;
+var heightInput = document.getElementById("height");
+var charInput = document.getElementById("character");
 heightInput.addEventListener("keypress", function (evt){
   var key = e.keyCode;
   if (key === 13) {
