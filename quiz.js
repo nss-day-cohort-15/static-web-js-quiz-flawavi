@@ -3,26 +3,17 @@
 var lines;
 var spaces;
 var spaceCount = 0;
-// var enterKey = document.getElementById('button');
-// enterKey.addEventListener('keypress', function (evt) {
-//     var key = e.keyCode;
-//     if (key === 13) {
-//     }
-//     evt.preventDefault();
-// });
 var heightInput = document.getElementById("height");
 var charInput = document.getElementById("character");
 heightInput.addEventListener("keypress", function (evt){
-  var key = e.keyCode;
+  var key = evt.keyCode;
   if (key === 13) {
   }
-  evt.preventDefault();
 })
 charInput.addEventListener("keypress", function (evt) {
-  var key = e.keyCode;
+  var key = evt.keyCode;
   if (key === 13) {
   }
-  evt.preventDefault();
 })
 
 
